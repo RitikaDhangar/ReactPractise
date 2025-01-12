@@ -1,22 +1,15 @@
-import "./App.css";
-import { useState } from "react";
-import MobileStore from "./components/MobileStore";
-import ShowMobiles from "./components/ShowMobiles";
+import React from "react";
+import { Alert, Button } from "react-bootstrap";
+import Signup from "./Auth/Signup";
 
-function App() {
-  const [mobileItem, setMobileItem] = useState({
-    id: null,
-    title: "",
-    features: "",
-    price: "",
-  });
-
+const App = () => {
   return (
-    <>
-      <MobileStore mobileItem={mobileItem} setMobileItem={setMobileItem} />
-      <ShowMobiles setMobileItem={setMobileItem} />
-    </>
+    <div className="p-3">
+      <Alert variant="success">This is a success alert!</Alert>
+      <Button variant="primary">Click Me</Button>
+      <Signup />
+    </div>
   );
-}
+};
 
 export default App;
