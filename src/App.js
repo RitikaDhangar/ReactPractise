@@ -1,20 +1,20 @@
 import "./App.css";
-import Home from "./components/Home";
-import Datapage from "./components/Datapage";
 import { useState } from "react";
+import MobileStore from "./components/MobileStore";
+import ShowMobiles from "./components/ShowMobiles";
 
 function App() {
-  const [product, setProduct] = useState({
+  const [mobileItem, setMobileItem] = useState({
+    id: null,
     title: "",
+    features: "",
     price: "",
-    imageUrl: "",
-    description: "",
-    id: "",
   });
+
   return (
     <>
-      <Home product={product} setProduct={setProduct} />
-      <Datapage setProductObj={setProduct} />
+      <MobileStore mobileItem={mobileItem} setMobileItem={setMobileItem} />
+      <ShowMobiles setMobileItem={setMobileItem} />
     </>
   );
 }
